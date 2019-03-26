@@ -48,7 +48,7 @@ def verify_password(username, password):
 
 Postman 中的认证方式存在很多种，此处我们根据代码中使用的 HTTPBasicAuth 选择 basic auth
 
-![Alt text](auth.png)
+![image](https://github.com/hhebo/notes/blob/master/images/flask-httpauth/username_password_auth.png)
 
 当在 Postman 中以原文形式将 username，password 存储在 HTTP 头部信息中传递，后端拿不到对应的值。众所周知 HTTP 的头部信息都是键值对的形式，HTTPBasicAuth 规定的也是键值对的形式，不过稍微有所不同。
 ```bash
@@ -57,7 +57,7 @@ Authorization: basic base64(account:password)
 键值对的键为 Authorization，值的开头是 basic + 空格 + base64加密过后的账号和密码。
 > (账后和密码中间有冒号)
 
-![Alt text](postman.png)
+![image](https://github.com/hhebo/notes/blob/master/images/flask-httpauth/basic_auth.png)
 
 当然，除了 Postman，我们也可以使用 Curl 命令请求对应的 api
 ```shell
@@ -103,7 +103,7 @@ def verify_token(token):
 
 > 使用 Postman 请求 api
 
-![Alt text](token_auth.png)
+![image](https://github.com/hhebo/notes/blob/master/images/flask-httpauth/token_auth.png)
 
 > 使用 Curl 命令请求 api
 ```shell
